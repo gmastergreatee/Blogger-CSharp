@@ -11,7 +11,7 @@ namespace Blogger.Services
 
         public PhotoService()
         {
-
+            _dummyPhotoServer = new DummyPhotoServer();
         }
 
         public async Task<ImageUploadResult> AddPhotoAsync(IFormFile file)
@@ -33,7 +33,7 @@ namespace Blogger.Services
             return uploadResult;
         }
 
-        public async Task<DeletionResult> DeletePhotoAsync(string publicId)
+        public async Task<DeleteResult> DeletePhotoAsync(string publicId)
         {
             var deletionParams = new DeletionParams(publicId);
             var result = await _dummyPhotoServer.DestroyAsync(deletionParams);

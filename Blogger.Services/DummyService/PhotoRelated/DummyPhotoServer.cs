@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Blogger.Services.DummyService.PhotoRelated
 {
@@ -8,47 +9,73 @@ namespace Blogger.Services.DummyService.PhotoRelated
     {
         public async Task<ImageUploadResult> UploadAsync(ImageUploadParams imageUploadParams)
         {
-            var folder = Directory.GetCurrentDirectory();
-            var dirName = "BlogImages";
-
-            var targetFolder = Path.Combine(folder, dirName);
-
-            if (!Directory.Exists(targetFolder))
+            string newFileName = "";
+            try
             {
-                Directory.CreateDirectory(targetFolder);
+                var folder = Directory.GetCurrentDirectory();
+                var dirName = "BlogImages";
+
+                var targetFolder = Path.Combine(folder, dirName);
+
+                if (!Directory.Exists(targetFolder))
+                {
+                    Directory.CreateDirectory(targetFolder);
+                }
+
+                newFileName = Guid.NewGuid().ToString();
+                var filePath = Path.Combine(targetFolder, newFileName);
+
+                File.WriteAllBytes(filePath, await imageUploadParams.File.ReadStreamAsync());
             }
-
-            string newFileName = Guid.NewGuid().ToString();
-            var filePath = Path.Combine(targetFolder, newFileName);
-
-            File.WriteAllBytes(filePath, await imageUploadParams.File.ReadStreamAsync());
+            catch (Exception ex)
+            {
+                return new ImageUploadResult()
+                {
+                    Error = new ImageUploadError()
+                    {
+                        Message = JsonConvert.SerializeObject(ex)
+                    }
+                };
+            }
 
             return new ImageUploadResult()
             {
-                PublicId = newFileName
+                PublicId = newFileName,
+                ImageUrl = "api/Photo/GetPic?id=" + newFileName,
+                Error = null,
             };
         }
 
-        public async Task<DeletionResult> DestroyAsync(DeletionParams deletionParams)
+        public async Task<DeleteResult> DestroyAsync(DeletionParams deletionParams)
         {
-            var folder = Directory.GetCurrentDirectory();
-            var dirName = "BlogImages";
-
-            var targetFolder = Path.Combine(folder, dirName);
-
-            if (!Directory.Exists(targetFolder))
+            try
             {
-                Directory.CreateDirectory(targetFolder);
+                var folder = Directory.GetCurrentDirectory();
+                var dirName = "BlogImages";
+
+                var targetFolder = Path.Combine(folder, dirName);
+
+                if (!Directory.Exists(targetFolder))
+                {
+                    Directory.CreateDirectory(targetFolder);
+                }
+
+                await Task.Run(new Action(() =>
+                {
+                    var filePath = Path.Combine(targetFolder, deletionParams._publicId);
+                    if (File.Exists(filePath))
+                        File.Delete(filePath);
+                }));
+            }
+            catch (Exception ex)
+            {
+                return new DeleteResult()
+                {
+                    Error = JsonConvert.SerializeObject(ex)
+                };
             }
 
-            await Task.Run(new Action(() =>
-            {
-                var filePath = Path.Combine(targetFolder, deletionParams._publicId);
-                if (File.Exists(filePath))
-                    File.Delete(filePath);
-            }));
-
-            return new DeletionResult();
+            return new DeleteResult();
         }
     }
 }
