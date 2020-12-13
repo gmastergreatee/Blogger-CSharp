@@ -28,7 +28,7 @@ namespace Blogger.Repository
                 await connection.OpenAsync();
 
                 affectedRows = await connection.ExecuteAsync(
-                    "Photo_Delete",
+                    "Blog_Delete",
                     new { BlogId = blogId },
                     commandType: CommandType.StoredProcedure
                 );

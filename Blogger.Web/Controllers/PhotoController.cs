@@ -62,7 +62,7 @@ namespace Blogger.Web.Controllers
             return Ok(photos);
         }
 
-        [HttpGet("{photoId:int")]
+        [HttpGet("{photoId:int}")]
         public async Task<ActionResult<Photo>> GetAction(int photoId)
         {
             var photo = await _photoRepository.GetAsync(photoId);
