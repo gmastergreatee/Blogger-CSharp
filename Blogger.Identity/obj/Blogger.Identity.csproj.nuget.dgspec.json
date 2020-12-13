@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Identity\\Blogger.Identity.csproj": {}
+  },
+  "projects": {
+    "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Identity\\Blogger.Identity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Identity\\Blogger.Identity.csproj",
+        "projectName": "Blogger.Identity",
+        "projectPath": "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Identity\\Blogger.Identity.csproj",
+        "packagesPath": "C:\\Users\\gmastergreatee\\.nuget\\packages\\",
+        "outputPath": "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Identity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gmastergreatee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Models\\Blogger.Models.csproj": {
+                "projectPath": "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Models\\Blogger.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Models\\Blogger.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Models\\Blogger.Models.csproj",
+        "projectName": "Blogger.Models",
+        "projectPath": "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Models\\Blogger.Models.csproj",
+        "packagesPath": "C:\\Users\\gmastergreatee\\.nuget\\packages\\",
+        "outputPath": "g:\\Test\\projects\\Blogger-CSharp\\Blogger.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gmastergreatee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
