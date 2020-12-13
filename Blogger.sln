@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogger.Web", "Blogger.Web\Blogger.Web.csproj", "{280A59F0-6F5C-4CF1-9329-DAE4CEBBD368}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogger.Models", "Blogger.Models\Blogger.Models.csproj", "{C29EF72C-FF7B-4E00-95D8-883450453532}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogger.Repository", "Blogger.Repository\Blogger.Repository.csproj", "{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,5 +46,17 @@ Global
 		{C29EF72C-FF7B-4E00-95D8-883450453532}.Release|x64.Build.0 = Release|Any CPU
 		{C29EF72C-FF7B-4E00-95D8-883450453532}.Release|x86.ActiveCfg = Release|Any CPU
 		{C29EF72C-FF7B-4E00-95D8-883450453532}.Release|x86.Build.0 = Release|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Debug|x64.Build.0 = Debug|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Debug|x86.Build.0 = Debug|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Release|x64.ActiveCfg = Release|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Release|x64.Build.0 = Release|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Release|x86.ActiveCfg = Release|Any CPU
+		{C917B85D-7D55-4A0B-8BDE-F5A8D6B16157}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
