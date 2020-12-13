@@ -4,3 +4,8 @@
 /Blogger.Repository/obj/
 /Blogger.Web/bin/
 /Blogger-UI/*.log
+/Blogger.Identity/bin/
+/Blogger.Identity/obj/
+/Blogger.Repository/bin/
+/Blogger.Services/bin
+/Blogger.Services/obj/
