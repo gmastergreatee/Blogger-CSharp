@@ -33,9 +33,9 @@ namespace Blogger.Services
             return uploadResult;
         }
 
-        public async Task<DeleteResult> DeletePhotoAsync(string publicId)
+        public async Task<ImageDeleteResult> DeletePhotoAsync(string publicId)
         {
-            var deletionParams = new DeletionParams(publicId);
+            var deletionParams = new ImageDeleteParams(publicId);
             var result = await _dummyPhotoServer.DestroyAsync(deletionParams);
             return result;
         }

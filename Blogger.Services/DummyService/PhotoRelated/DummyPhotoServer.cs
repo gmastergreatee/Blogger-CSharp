@@ -46,7 +46,7 @@ namespace Blogger.Services.DummyService.PhotoRelated
             };
         }
 
-        public async Task<DeleteResult> DestroyAsync(DeletionParams deletionParams)
+        public async Task<ImageDeleteResult> DestroyAsync(ImageDeleteParams deletionParams)
         {
             try
             {
@@ -69,13 +69,13 @@ namespace Blogger.Services.DummyService.PhotoRelated
             }
             catch (Exception ex)
             {
-                return new DeleteResult()
+                return new ImageDeleteResult()
                 {
-                    Error = JsonConvert.SerializeObject(ex)
+                    Error = new ImageDeleteError() { Message = JsonConvert.SerializeObject(ex) }
                 };
             }
 
-            return new DeleteResult();
+            return new ImageDeleteResult();
         }
     }
 }

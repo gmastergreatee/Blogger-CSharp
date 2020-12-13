@@ -9,6 +9,6 @@ namespace Blogger.Services
     {
         Task<ImageUploadResult> AddPhotoAsync(IFormFile file);
 
-        Task<DeleteResult> DeletePhotoAsync(string publicId);
+        Task<ImageDeleteResult> DeletePhotoAsync(string publicId);
     }
 }

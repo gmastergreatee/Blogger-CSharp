@@ -2,8 +2,8 @@ using System;
 
 namespace Blogger.Services.DummyService.PhotoRelated
 {
-    public class DeleteResult
+    public class ImageDeleteError
     {
-        public string Error { get; set; } = null;
+        public string Message { get; set; }
     }
 }

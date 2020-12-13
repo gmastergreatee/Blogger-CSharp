@@ -2,11 +2,11 @@ using System;
 
 namespace Blogger.Services.DummyService.PhotoRelated
 {
-    public class DeletionParams
+    public class ImageDeleteParams
     {
         public string _publicId { get; private set; }
 
-        public DeletionParams(string publicId)
+        public ImageDeleteParams(string publicId)
         {
             _publicId = publicId;
         }
