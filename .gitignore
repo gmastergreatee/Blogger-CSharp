@@ -1,1 +1,6 @@
 /Blogger.Web/obj/
+/Blogger.Models/bin/
+/Blogger.Models/obj/
+/Blogger.Repository/obj/
+/Blogger.Web/bin/
+/Blogger-UI/*.log
