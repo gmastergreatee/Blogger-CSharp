@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "fernandoescolar.vscode-solution-explorer",
+        "ms-dotnettools.csharp",
+        "angular.ng-template",
+        "patcx.vscode-nuget-gallery",
+        "jesschadwick.nuget-reverse-package-search",
+        "zignd.html-css-class-completion"
+    ]
+}

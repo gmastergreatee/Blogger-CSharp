@@ -3,10 +3,13 @@
   <ItemGroup>
     <ProjectReference Include="..\Blogger.Models\Blogger.Models.csproj" />
     <ProjectReference Include="..\Blogger.Repository\Blogger.Repository.csproj" />
+    <ProjectReference Include="..\Blogger.Services\Blogger.Services.csproj" />
+    <ProjectReference Include="..\Blogger.Identity\Blogger.Identity.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.78" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
